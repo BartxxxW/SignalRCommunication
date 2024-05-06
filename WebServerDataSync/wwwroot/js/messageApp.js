@@ -15,7 +15,7 @@
         if (!msg || msg == '') { return }
 
         try {
-            await connection.invoke("Send", msg);
+            await connection.invoke("SendToDesktopClient", msg);
         } catch (err) {
             console.error(err);
         }
@@ -45,7 +45,7 @@
     });
 
 
-    connection.on("ReceiveMessage", (message) => {
+    connection.on("ReceiveDesktopMessage", (message) => {
         alert(message);
         $("#receivedMsg").text(message);
 
