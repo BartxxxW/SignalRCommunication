@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Real time communication project with use of SignalR</h1>
+    <div class="grid-container">
+        <input class="btn btn-primary" type="button" value="Send Message" id="buttonSend">
+        <input type="text" placeholder="Enter text here" id="messageToSend">
+    </div>
+    <div class="grid-container">
+        <p>Received Massage :</p>
+        <p id="receivedMsg">emptson</p>
+    </div>
+</div>
+
+
+@section Scripts
+{
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="~/js/messageApp.js"></script>
+    
+}
