@@ -2,3 +2,9 @@
 WebServerDataSync/bin/
 WebServerDataSync/obj/
 .vs/
+.github
+/WebServerDataSync/Properties/PublishProfiles
+/.dockerignore
+/.gitignore
+/.gitignore
+/.gitignore
