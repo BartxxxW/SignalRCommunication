@@ -1,22 +1,6 @@
 ﻿
 (async function () {
-    const btnSend = document.getElementById("buttonSend");
     const message = document.getElementById("messageToSend");
-
-
-    $(btnSend).click(async () => {
-
-        const msg = $(message).val();
-
-        if (!msg || msg == '') { return }
-
-        try {
-            await connection.invoke("SendToDesktopClient", msg);
-        } catch (err) {
-            console.error(err);
-        }
-
-    })
 
     $(message).on("input", async function ()  {
 
