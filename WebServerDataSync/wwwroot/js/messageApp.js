@@ -18,6 +18,21 @@
 
     })
 
+    $(message).on("input", async function ()  {
+
+        const msg = $(message).val();
+
+        if (!msg || msg == '') { return }
+
+        try {
+            await connection.invoke("SendToDesktopClient", msg);
+        } catch (err) {
+            console.error(err);
+        }
+
+    })
+
+
     const connection = new signalR.HubConnectionBuilder()
         .withUrl("/messageHub")
         .configureLogging(signalR.LogLevel.Information)
