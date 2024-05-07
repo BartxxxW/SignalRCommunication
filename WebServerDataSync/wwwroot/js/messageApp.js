@@ -2,10 +2,6 @@
 (async function () {
     const btnSend = document.getElementById("buttonSend");
     const message = document.getElementById("messageToSend");
-    const receivedMsg = document.getElementById("receivedMsg");
- 
-
-
 
 
     $(btnSend).click(async () => {
@@ -46,12 +42,10 @@
 
 
     connection.on("ReceiveDesktopMessage", (message) => {
-        alert(message);
         $("#receivedMsg").text(message);
 
     });
 
-    // Start the connection.
     start();
 })();
 
